@@ -1,0 +1,52 @@
+@import url(../../pages/variables.css);
+
+/*-----ширина в select---*/
+.new-select__item .form__label_width_radio, 
+.new-select__item .form__label_width_checkbox {
+    width: 100%;
+} 
+
+.checkbox-select {
+    color: var(--DARK-BLUE);
+}
+
+.new-select__item .form__label {
+    padding: 10px 20px;
+    box-sizing: border-box;
+    color: var(--BLACK);
+    font-weight: normal;
+}
+
+.new-select__item .radio_label {
+    padding: 10px 30px;
+}
+
+.new-select__item .checkbox_label {
+    color: var(--DARK-BLUE);
+}
+
+.new-select__item label .visible-radio {
+    background-color: var(--GREY);
+}
+.new-select__item label .visible-checkbox {
+    border-color: var(--DARK-BLUE);
+}
+
+.new-select__item label .input__radio:checked + .visible-radio {
+    border-color: var(--DARK-GREY);
+    background-color: var(--WHITE);
+}
+
+.new-select__item label .input__radio:checked + .visible-radio:before {
+    border-color: var(--DARK-GREY);
+    background-color: var(--DARK-GREY);
+}
+
+
+.new-select__item label .input__checkbox:checked + .visible-checkbox {
+    border-color: var(--DARK-BLUE);
+}
+
+.new-select__item label .input__radio:checked + .visible-radio + .radio_label_text {
+    color: var(--BLACK);
+}

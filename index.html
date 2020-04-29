@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./vendor/open_sans/fonts.css">
+    <link rel="stylesheet" href="./pages/index.css">
+    <title>Стилизация элементов форм</title>
+    <style>
+      body {
+        padding: 0 30px 150px 30px;
+        font-size: 14px;
+        line-height: 16px;
+      
+      }
+      h3 {
+        font-size: 16px;
+        margin: 60px 0 15px 0;
+      }
+      .row {
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-between; 
+        width: 60%;
+      }
+    </style>
+</head>
+<body>
+  <div class="page">
+    <section class="form">
+      <div class="buttons">
+        <h3>Кнопка (белая, оранжевая, темно-синяя, серо-синяя)</h3>
+        <div class="row">
+          <button class="form__button form__button_width_large form__button_color_white form__button_shadow">Войти в личный кабинет</button>
+          <button class="form__button form__button_width_small form__button_color_orange">Войти</button>
+          <button class="form__button form__button_width_medium form__button_color_dark-blue form__button_shadow">Узнать больше</button>
+          <button class="form__button form__button_width_small form__button_color_grey-blue form__button_shadow">Назад</button>
+        </div>
+        <h3>Кнопка с иконкой загрузить</h3>
+        <button class="form__button form__button_width_medium form__button_color_dark-blue form__button_shadow form__button_load">Загрузить</button>
+        <h3>Кнопка с выпадающим списком (Оценить, Подбор)</h3>
+        <button class="form__check-button form__button_width_small form__button_color_orange form__button_shadow">
+          Подбор
+          <div class="check-button__options check-button__options--hidden">
+            <div class="check-button_option">Оценка</div>
+            <div class="check-button_option check-button_option--selected">Подбор</div>
+          </div>
+        </button>
+      </div>
+      <h3>Метка элемента формы</h3>
+      <div class="form__group form__group_width_large">
+        <label class="form__label">Электронная почта
+          <input type="email" onblur="inputValidation(this)" onfocus="clearClassList(this)" class="input__email input_width_large" placeholder="Введите адрес электронной почты" value="sofyaevgenievna@gmail.com">
+          <span></span>
+        </label>
+      </div>
+    </section>
+    <section class="item">
+      <!-- код -->
+      <div class="inputs">
+        <h3>Поле ввода “text”</h3>
+        <div class="form__group form__group_width_large">
+          <label class="form__label">Имя
+            <input type="text" onblur="inputValidation(this)" onfocus="clearClassList(this)" class="input_width_large input_color_black input_placeholder_color_dark-grey" placeholder="Введите имя" value="Софья">
+            <span></span>
+          </label>
+        </div>
+
+        <h3>Поле ввода “text” (с иконкой поиска)</h3>
+        <div class="form__group form__group_width_small">
+          <div class="wrap__input__text-search">
+            <input type="text" class="input__text-search input_width_small input_color_black input_placeholder_color_dark-grey" placeholder="Поиск заявки">
+            <span></span>
+          </div>
+        </div>
+
+        <h3>Поле ввода “email”</h3>
+        <div class="form__group form__group_width_large">
+          <label class="form__label">Электронная почта
+            <input type="email" onblur="inputValidation(this)" onfocus="clearClassList(this)" class="input__email input_width_large input_color_black input_placeholder_color_dark-grey" placeholder="Введите адрес электронной почты" value="sofyaevgenievna@gmail.com">
+            <span></span>
+          </label>
+        </div>
+
+        <h3>Поле ввода “tel”</h3>
+        <div class="form__group form__group_width_large">
+          <label class="form__label">Телефон
+            <input type="tel" onblur="inputValidation(this)" onfocus="clearClassList(this)" class="input__tel input_width_large input_color_black input_placeholder_color_dark-grey" placeholder="Введите телефон" value="89005555555">
+            <span></span>
+          </label>
+        </div>
+
+        <h3>Поле ввода “password”</h3>
+        <div class="form__group form__group_width_large">
+          <label class="form__label">Пароль
+            <input type="password" onblur="inputValidation(this)" onfocus="clearClassList(this)" class="input__password input_width_large input_color_black input_placeholder_color_dark-grey input__password-error" placeholder="Введите пароль" minlength="8">
+            <div class="password_error-message">Пароль должен содержать не менее 8 символов</div>
+          </label>
+          
+        </div>
+
+        <h3>Поле ввода “radio”</h3>
+        <div class="form__group input_display_row">
+          <label class="form__label form__label_width_radio radio_label">
+            <input type="radio" checked class="input__radio invisible-radio" name="sex" value="female">
+            <div class="visible-radio"></div>
+            <div class="radio_label_text">Женщина</div>
+          </label>
+          <label class="form__label form__label_width_radio radio_label">
+            <input type="radio" class="input__radio invisible-radio" name="sex" value="male">
+            <div class="visible-radio"></div>
+            <div class="radio_label_text">Мужчина</div>
+          </label>
+        </div>
+
+        <h3>Поле ввода “checkbox”</h3>
+        <div class="form__group input_display_col">
+          <label class="form__label form__label_width_checkbox checkbox_label">
+            <input type="checkbox" checked class="input__checkbox invisible-checkbox" name="condition" value="contract" checked>
+            <div class="visible-checkbox"></div>
+            <div class="checkbox_label_text">Я принимаю условия Договора (оферты) по обработке персональных данных</div>
+          </label>
+          <label class="form__label form__label_width_checkbox checkbox_label">
+            <input type="checkbox" class="input__checkbox invisible-checkbox" name="condition" value="agreement">
+            <div class="visible-checkbox"></div>
+            <div class="checkbox_label_text">Я принимаю условия Соглашения</div>
+          </label>
+        </div>
+
+        <h3>Раскрывающийся список</h3>
+        <label class="form__label">Индустрия
+            <select name="industry" class="form__select" size="2" placeholder="Информационные технологии">
+              <option value="1" class="form__option">Информационные технологии, ПО, связь, интернет</option>
+              <option value="2" class="form__option">Торговые сети, розничная торговля/Retail</option>
+              <option value="3" class="form__option">Финансовый сектор (банки, страхование, лизинг)</option>
+              <option value="4" class="form__option">Гостиницы, рестораны, красота, спорт, туризм</option>
+              <option value="5" class="form__option">Логистика, транспоритировка, склад, ВЭД</option>
+            </select>
+        </label>
+
+        <h3>Многострочный текст</h3>
+        <label class="form__label form__label_width_textarea">Профессиональный опыт
+          <div class="textarea-wrap">
+            <div class="resizer"></div>
+            <textarea name="" class="form__textarea form__textarea_width_large" placeholder="Введите текст">Развитие корпоративной культуры, подбор персонала, адаптация, обучение, оценка персонала, системы мотивации персонала</textarea>
+          </div>
+        </label>
+
+        <h3>Поле ввода “date”</h3>
+        <div class="date-wrap">
+          <input type="text" class="input__date" id="datepicker" autocomplete="off" placeholder="мм/дд/гггг">
+        </div>
+
+        <h3>Список множественного выбора (c checkbox)</h3>
+        <label class="form__label">Выберите этап подбора
+          <select name="stage" class="form__select" size="4" multiple placeholder="Выберите этап подбора">
+            <option value="1" class="form__option checkbox-option">Неразобранные</option>
+            <option value="2" class="form__option checkbox-option">Выход на работу</option>
+            <option value="3" selected class="form__option checkbox-option">Запрос по e-mail</option>
+            <option value="4" class="form__option checkbox-option">Отказ</option>
+            <option value="5" selected class="form__option checkbox-option">Телефонное интервью</option>
+          </select>
+        </label>
+        <h3>Список множественного выбора (c radio)</h3>
+        <label class="form__label">
+          <select name="industry" class="form__select" size="8">
+            <option value="1" class="form__option radio-option">Неразобранные</option>
+            <option value="2" class="form__option radio-option">Запрос по e-mail</option>
+            <option value="3" selected class="form__option radio-option">Телефонное интервью</option>
+            <option value="4" class="form__option radio-option">Оценка</option>
+            <option value="5" class="form__option radio-option">Интервью</option>
+            <option value="6" class="form__option radio-option">Предложение о работе</option>
+            <option value="7" class="form__option radio-option">Выход на работу</option>
+            <option value="8" class="form__option radio-option">Отказ</option>
+          </select>
+        </label>
+        <h3>Список множественного выбора (c checkbox) с возможностью добавления строк (+)</h3>
+        <label class="form__label">
+          <select name="industry" multiple class="form__select action-select" size="4">
+            <option value="1" class="form__option checkbox-option">1</option>
+            <option value="2" selected class="form__option checkbox-option move-option">2</option>
+            <option value="3" selected class="form__option checkbox-option move-option">3</option>
+          </select>
+        </label>
+      </div>
+    </section>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+  <script src='./script/dragula.min.js'></script>
+  <script src='./script/inputmask.js'></script>
+  <script src="./script/datepicker.js"></script>
+  <script src="./script/script.js"></script>
+  <script>
+    $('#datepicker').datepicker({
+		  showOtherMonths: true
+    });    
+  </script>
+</body>
+</html>

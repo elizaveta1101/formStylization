@@ -1,0 +1,41 @@
+@import url(../../pages/variables.css);
+
+.form__textarea {
+    border: 1px solid var(--DARK-GREY);
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 15px;
+    margin-top: 10px;
+    min-height: 120px;
+    overflow: auto;
+    resize: vertical;
+    outline: none;
+}
+
+.form__textarea_width_large {
+    min-width: 450px;
+}
+
+textarea::placeholder {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: normal;
+}
+
+.textarea-wrap {
+    position: relative;
+    line-height: 0;
+}
+
+.resizer {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135deg, #fff 0%, #fff 50%, var(--DARK-GREY) 50%,var(--DARK-GREY) 100%);
+    border: 3px solid white;
+    border-radius: 4px;
+    pointer-events: none;
+    z-index: 2;
+}

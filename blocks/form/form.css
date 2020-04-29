@@ -1,0 +1,14 @@
+@import url(./button.css);
+@import url(./label.css);
+@import url(./select.css);
+@import url(./textarea.css);
+@import url(./select-radio_checkbox.css);
+@import url(./select-move.css);
+
+/*---------FORM__GROUP-------*/
+.form__group_width_large {
+    width: 450px;
+}
+.form__group_width_small {
+    width: 250px;
+}

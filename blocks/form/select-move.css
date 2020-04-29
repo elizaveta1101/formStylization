@@ -1,0 +1,46 @@
+@import url(../../pages/variables.css);
+
+.item-move {
+    position: relative;
+}
+.action-list .new-select__item .form__label {
+    padding: 10px 30px;
+}
+.item-move:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 10px;
+    height: 16px;
+    background: var(--move-icon) top left space;
+}
+.item-add {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--DARK-GREY);
+    padding: 10px 60px;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+}
+
+.item-add:before {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 30px;
+    width: 15px;
+    height: 15px;
+    background: var(--add-icon) center center no-repeat;
+    
+}
+
+#input-add {
+    width: 100%;
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}

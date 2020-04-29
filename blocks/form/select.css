@@ -1,0 +1,136 @@
+@import url(../../pages/variables.css);
+
+/*-------------меню SELECT-------------*/
+.form__select {
+    display: block;
+    max-width: 450px;
+    width: 100%;
+    position: relative;
+}
+
+.form__select_size_2 {
+    height: 80px;
+}
+.form__select_size_3 {
+    height: 120px;
+}
+.form__select_size_4 {
+    height: 160px;
+}
+.form__select_size_5 {
+    height: 200px;
+}
+.form__select_size_8 {
+    height: 320px;
+}
+
+.new-select {
+    border: 1px solid var(--DARK-GREY);
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: relative;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 10px;
+    font-weight: normal;
+    color: var(--BLACK);
+}
+
+.new-select__list {
+    border: 1px solid var(--DARK-GREY);
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: var(--select-shadow);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    background: #fff;
+    cursor: pointer;
+    overflow-y: scroll;
+    display: block;
+    scrollbar-width: none;
+}
+
+.new-select__item:nth-child(2n) {
+    background-color: var(--LIGHT-SKY-BLUE);
+}
+
+.new-select__item:hover {
+    background-color: var(--DARK-SKY-BLUE);
+}
+
+.new-select__item span {
+    display: block;
+    padding: 12px 15px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: normal;
+    color: var(--GREY-BLUE);
+}
+
+
+.new-select:after {
+    content: '';
+    border: 5px solid;
+    border-color: var(--arrow) transparent transparent transparent;
+
+    position: absolute;
+    top: 18px;
+    right: 25px;
+    z-index: 1;
+}
+
+.new-select.on:after {
+    border-color: transparent transparent var(--arrow) transparent;
+    top: 12px;
+}
+
+
+
+
+/*-------------scroll--------------*/
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.customScroll_sb {
+background-color: var(--DARK-GREY);
+cursor:pointer;
+position:absolute;
+right:10px;
+border-radius: 100px;
+z-index: 5;
+}
+.customScroll_sb_down,
+.customScroll_sb_over {
+    background-color: var(--GREY-BLUE);
+}
+.customScroll_st {
+background-color: transparent;
+height:100%;
+position:absolute;
+right:10px;
+top:0;
+border-radius: 100px;
+z-index: 5;
+}
+.customScroll_up {
+background-color: transparent;
+position:absolute;
+right:10px;
+top:0;
+border-radius: 100px;
+z-index: 5;
+}
+.customScroll_down {
+background-color: transparent;
+bottom:0;
+cursor:pointer;
+position:absolute;
+right:10px;
+border-radius: 100px;
+z-index: 5;
+}
+

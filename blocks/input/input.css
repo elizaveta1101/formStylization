@@ -1,0 +1,95 @@
+@import url(../../pages/variables.css);
+@import url(./date.css);
+@import url(./radio_checkbox.css);
+
+
+/*---------Поля для ввода текста----------*/
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    padding: 10px 15px;
+    border: 1px solid var(--DARK-GREY);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    outline: none;
+}
+.input_width_small {
+    width: 250px;
+}
+.input_width_large {
+    width: 450px;
+}
+.input_color_black {
+    color: var(--BLACK);
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="password"]::placeholder {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: normal;
+}
+.input_placeholder_color_dark-grey::placeholder {
+    color: var(--DARK-GREY);
+}
+.wrap__input__text-search {
+    position: relative;
+}
+.wrap__input__text-search::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    width: 24px;
+    height: 24px;
+    background: var(--search-icon) center center no-repeat;
+}
+.wrap__input__text-search input {
+    padding-left: 45px;
+}
+
+/*--------Сообщения для текстовых полей----------*/
+
+input.invalid-input::placeholder {
+    color: var(--RED);
+}
+input.invalid-input {
+    border-color: var(--RED);
+}
+input.valid-input {
+    border-color: var(--GREEN);
+}
+.valid-icon {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--check-icon) center center no-repeat;
+    top: 45px;
+    right: 20px;
+}
+
+.invalid-icon {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--error-icon) center center no-repeat;
+    top: 45px;
+    right: 20px;
+}
+.password_error-message {
+    display: none;
+    color: var(--RED);
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 8px;
+}
+label input[type=password]:invalid + .password_error-message {
+    display: block;
+} 

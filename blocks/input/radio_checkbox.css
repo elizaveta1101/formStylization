@@ -1,0 +1,92 @@
+@import url(../../pages/variables.css);
+
+/*-------------------radio, checkbox---------------*/
+.input_display_row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.input_display_row .form__label+.form__label {
+    margin-left: 5px;
+}
+
+.input_display_col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+.input_display_col .form__label+.form__label {
+    margin-top: 25px;
+}
+
+.invisible-radio,
+.invisible-checkbox {
+    position: absolute;
+    opacity: 0;
+}
+
+.visible-radio {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    border: 2px solid var(--DARK-GREY);
+    border-radius: 50%;
+    background: transparent;
+    margin-right: 10px;
+}
+
+.visible-checkbox {
+    position: relative;
+    min-width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    border: 2px solid var(--DARK-GREY);
+    border-radius: 2px;
+    background: transparent;
+    margin-right: 10px;
+}
+
+.input__radio:checked + .visible-radio,
+.input__checkbox:checked + .visible-checkbox {
+    border-color: var(--DARK-BLUE);
+}
+
+.input__radio:checked + .visible-radio + .radio_label_text,
+.input__checkbox:checked + .visible-checkbox + .checkbox_label_text {
+    color: var(--DARK-BLUE);
+}
+
+.input__radio:checked + .visible-radio:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--DARK-BLUE);
+}
+
+.input__checkbox:checked + .visible-checkbox:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 14px;
+    height: 10px;
+    background: var(--checkbox-cheked) center center no-repeat;
+}
+
+.input__checkbox:disabled +.visible-checkbox,
+.input__radio:disabled +.visible-radio {
+    border-color: var(--GREY);
+}
+.input__radio:disabled + .visible-radio + .radio_label_text,
+.input__checkbox:disabled + .visible-checkbox + .checkbox_label_text {
+    color: var(--GREY);
+}

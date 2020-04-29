@@ -1,0 +1,103 @@
+@import url(../../pages/variables.css);
+
+/*----------календарь----------*/
+input[type="text"].input__date {
+    padding-left: 45px;
+    width: 160px;
+    color: var(--DARK-GREY);
+    outline: none;
+}
+
+.date-wrap {
+    position: relative;
+}
+
+.date-wrap:before {
+    content: '';
+    position: absolute;
+    left: 16px;
+    top: 20px;
+    width: 24px;
+    height: 24px;
+    background: var(--calendar-icon) center center no-repeat;
+}
+
+/*----------------------datepicker------------*/
+.ui-datepicker {
+	display: none;
+	padding: 10px 12px;
+	background: rgba(255,255,255,0.9);
+	box-shadow: 0 0 10px rgba(0,0,0,.3);
+	font: 13px/1.55 'Open Sans', Helvetica, Arial, sans-serif;
+	text-align: center;
+	color: #666;
+}
+.ui-datepicker a {
+	color: #404040;
+}
+.ui-datepicker-header {
+	position: relative;
+	margin: -10px -12px 10px;
+	padding: 10px;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	font-size: 15px;
+	line-height: 27px;
+}
+.ui-datepicker-prev, 
+.ui-datepicker-next {
+	position: absolute;
+	top: 0;
+	display: block;
+	width: 47px;
+	height: 47px;
+	font-size: 15px;
+	line-height: 47px;
+	text-decoration: none;
+	cursor: pointer;
+}
+.ui-datepicker-prev {
+	left: 0;
+}
+.ui-datepicker-next {
+	right: 0;
+}
+.ui-datepicker-calendar {
+	border-collapse: collapse;
+	font-size: 13px;
+	line-height: 27px;
+}
+.ui-datepicker-calendar th {
+	color: #999;
+}
+.ui-datepicker-calendar a,
+.ui-datepicker-calendar span {
+	display: block;
+	width: 31px;
+	margin: auto;
+	text-decoration: none;
+	color: #404040;
+}
+.ui-datepicker-calendar a:hover {
+	background: rgba(0,0,0,.05);	
+}
+.ui-datepicker-calendar span {
+	color: #bfbfbf;
+}
+.ui-datepicker-today a {
+	font-weight: 700;
+}
+.ui-datepicker-calendar .ui-state-active {
+	background: rgba(0,0,0,.05);
+	cursor: default;	
+}
+.ui-datepicker-inline {
+	border: 2px solid #e5e5e5;
+	background: #fff;
+	box-shadow: none;
+}
+.ui-datepicker-inline .ui-datepicker-header {
+	line-height: 47px;
+}
+.ui-datepicker-inline .ui-datepicker-calendar {
+	width: 100%;
+}

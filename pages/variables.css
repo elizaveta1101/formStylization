@@ -1,0 +1,31 @@
+:root {
+/*----------COLORS-----------------*/
+--WHITE: #fff;
+--LIGHT-SKY-BLUE: #EFF2F7;
+--DARK-SKY-BLUE: #E0E4EB;
+--GREY: #D6D7D8;
+--DARK-GREY: #909090;
+--GREY-BLUE: #505565;
+--DARK-BLUE: #09293A;
+--BLACK: #000;
+--RED: #FF2D55;
+--ORANGE: #F89735;
+--GREEN: #4CD964;
+--arrow: #A1A4B1;
+
+/*--------SHADOW-------*/
+--shadow: 0px 10px 15px rgba(0,0,0,0.15);
+--select-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
+
+/*--------PATH TO IMG--------*/
+--download-icon: url(../../images/download-icon.svg);
+--search-icon: url(../../images/search-icon.svg);
+--checkbox-cheked: url(../../images/checkbox-checked.svg);
+--add-icon: url(../../images/add-icon.svg);
+--check-icon: url(../../images/check-icon.svg);
+--error-icon: url(../../images/error-icon.svg);
+--move-icon: url(../../images/move-icon.svg);
+--ui555: url("../images/ui-icons_555555_256x240.png");
+--ui777: url("../images/ui-icons_777777_256x240.png");
+--calendar-icon: url(../../images/calendar-icon.svg);
+}

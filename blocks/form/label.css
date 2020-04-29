@@ -1,0 +1,40 @@
+@import url(../../pages/variables.css);
+
+.form__label {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    color: var(--DARK-BLUE);
+    position: relative;
+}
+
+.form__label_width_radio {
+    width: 120px;  
+}
+
+.form__label_width_checkbox {
+    width: 320px;
+}
+
+.radio_label,
+.checkbox_label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--DARK-GREY);
+}
+.radio_label:hover,
+.checkbox_label:hover {
+    cursor: pointer;
+}
+
+.form__label_width_textarea {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+}
+
+
+
